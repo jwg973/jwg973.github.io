@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why Machine Learning Models Fail in Fundraising"
-date:   2026-06-13 11:12:50 -0700
+date:   2026-06-12 11:12:50 -0700
 categories: general
 ---
 

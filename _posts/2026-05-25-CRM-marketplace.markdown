@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Exploring the Fundraising CRM Marketplace in 2026: A Barbell, a Squeeze, and Some Hard Questions"
-date:   2026-05-25 11:12:50 -0700
+date:   2026-05-26 11:12:50 -0700
 categories: general
 ---
 
