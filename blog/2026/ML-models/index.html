@@ -1,0 +1,122 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Why Machine Learning Models Fail in Fundraising | Jon Garrow </title> <meta name="author" content="Jon Garrow"> <meta name="description" content="Fundraising Data Leader "> <meta name="keywords" content="fundraising, data, nonprofit, crm, saas"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>:root{--max-content-width:930px}</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://jongarrow.com/blog/2026/ML-models/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Jon</span> Garrow </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">writing </a> </li> <li class="nav-item "> <a class="nav-link" href="/consulting/">consulting </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Why Machine Learning Models Fail in Fundraising</h1> <p class="post-meta"> Created on June 12, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a>   ·   <a href="/blog/category/general"> <i class="fa-solid fa-tag fa-sm"></i> general</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <h2 id="the-inescapable-buzz">The Inescapable Buzz</h2> <p>I first became aware of predictive modeling in fundraising in the early 2010s, when people like Josh Birkholz<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> talked about it at Apra conferences and large universities were building their own models. Models were the “new new” we all wanted but mostly couldn’t afford. Since then, many organizations have bought or built their own predictive models to guide fundraising strategies. Recently I was surprised to see we are <em>still having the same debate</em> in prospect development circles: True believers have seen them work and see them as vital tools, while skeptics have seen them completely fail to gain traction on a team, and see them as an expensive distraction. Why have we not progressed in 15 years?</p> <p>First, a quick explanation of terms. Predictive modeling is the process of using historical data to make predictions about future outcomes. Think the Netflix recommendation engine or Amazon’s product recommendations. In fundraising, this often means predicting which donors are most likely to give, how much they might give, or when they might give. The technique used is typically <strong>machine learning</strong> (ML), which means using algorithms to identify patterns in data and make predictions based on those patterns. ML has been around since the late 1950s, and the common algorithms used for fundraising (logistic regression and decision trees) have been well-established for decades.</p> <p>For your context in the age of artificial intelligence: ML is a subset of AI, distinct from generative AI, which focuses on creating new (“new”) content rather than making predictions based on existing data. The magic and explosive growth of gen AI is not ML; ML is comparatively boring, and that’s ok. We still like the advice on what to watch and shop for.</p> <h2 id="deployment-failures">Deployment Failures</h2> <p><em>How</em> does an ML model fail in fundraising? Assuming it is built and tested correctly, it should work just fine within the parameters of its accuracy. The ML development process includes a “test set” of data withheld from the data used to train the model; the model’s performance in predicting on the test set tells us how well it should work in the real world.</p> <h3 id="ignoremd">Ignore.md</h3> <p>One way an ML model can fail is if people ignore it. Many fundraisers start with some doubt and uncertainty about ML models, and with good reason: they are complex and hard to explain, and the results can be counterintuitive. Unlike wealth screening, ML models feel like a black box. I think there is a tendency for data scientists to play up the power and mystery of the models (and the highly paid consultants who built them), which feeds into the distrust.</p> <p>So, the models are ignored, and we stick with capacity, RFM, engagement, affinity, etc. etc. It gets tiresome to keep pushing a model on someone who doesn’t want it, and eventually even the executive sponsor decides it was an expensive mistake and moves on. This is partly a stakeholder engagement issue, which is a topic on its own.</p> <h3 id="wrong-tool-for-the-job">Wrong Tool for the Job</h3> <p>In other cases, fundraisers DO use the model but quickly lose trust when they see that it has scored their warmest, most engaged prospects lower than expected. Was their intuition wrong in cultivating this donor? Have they misread cues that they are ready to commit a major gift in the next 6 months? Likely not! In these cases, the model is <em>not</em> wiser than the human who has been having lunch with the prospect. It was not <em>intended</em> to tell them which prospects are actually not good, and to stop buying them lunch.</p> <p>These models are typically intended to surface <em>new</em> prospects who have not yet gone through the human qualification process and been found to be a good prospect.</p> <ul> <li>While you should definitely look at the scores for active prospects in validating the model, you may not want to add the data to their records. That will just highlight the weakness of the model every time a fundraiser sees it. <em>If it’s intended to prioritize outreach to uncontacted major gift prospects, only score those.</em> </li> </ul> <h3 id="trust-and-understanding">Trust and Understanding</h3> <p>Often it’s not the model itself, but rather the end users’ lack of trust and understanding. If fundraisers don’t understand how the model works, why it makes certain recommendations, and <em>how they are expected to use the model</em>, they won’t use it effectively and the story becomes “the model sucks.”</p> <h2 id="model-failures">Model Failures</h2> <h3 id="dumb-models">Dumb Models</h3> <p><em>Why</em> does a model fail? It is quite possible that the model <em>does</em> suck. Many vendors will make a big deal about how they will “use 100+ factors in the model” (power and mystery will cost you $30K+ per model), when in reality many algorithms will sort through those and pick the handful that are truly predictive, so it doesn’t take days and days to compute. And <em>some</em> vendors will sell you a “model” that is extremely generic and little more than RFM by another name.</p> <h3 id="sparse-data">Sparse Data</h3> <p>Especially in higher education, we can have a great deal of data on our prospects: employment history, addresses, family details, and how they engage with the organization. Heck, we might know what clubs they were in and who their roommates were. But the <em>real</em> stuff is buried in the very human interactions and relationships that are hard to quantify. Did a faculty member pay their last term’s tuition, allowing them to graduate? Did they fall in love with their future spouse in the library, sharing silent looks across carrels? Are they about to sell a large, low-profile data security firm?</p> <p><em>If</em> very thorough notes are stored in the CRM about conversations had with constituents, they <em>can</em> be analyzed with natural language processing to develop some insights. That’s a different type of ML work. But it’s not easy to do and you probably don’t want to spend an extra pile of money for a vendor to do that.</p> <p>In cause or social service organizations, we tend to have <em>much</em> sparser data, and constituents may not have decades-long relationships with our organization. In these cases, a predictive model might not be feasible if all you’ve got is giving histories. In any case, <em>be sure you have enough cases of the thing you are trying to predict</em>. If you’ve only got a handful of examples, the model won’t be able to learn effectively.</p> <p>In the end, it’s the constituents we haven’t yet spoken with that need an ML model to help us sort through. And the data we have may not be all that predictive of how someone will behave. Most organizations I’ve worked with need to focus their attention on current engagement data:</p> <ul> <li>Put email opens and clicks in your CRM or a data warehouse.</li> <li>Ditto for social media interactions, if you can afford a listening tool.</li> <li>Track event attendance, volunteerism, and other interactions in your CRM.</li> <li>Use this data to build engagement scores and develop insights.</li> </ul> <p>This will be incredibly useful data to have on hand next time you think about a predictive model.</p> <h2 id="closing-thoughts">Closing Thoughts</h2> <p>We are still having the same debate about predictive modeling in 2026 because we haven’t fixed the fundamental issues with data quality, user trust, and understanding. I suspect the key here is that the skeptics refer to “the model.” The model for what?! If you deployed a predictive model and people aren’t clear on what it’s predicting, then of course they will think it’s junk and not use it.</p> <ul> <li>Be sure you have sufficient data for modeling, and ask about the diagnostics.</li> <li>Be clear what the model is for and how to use it.</li> <li>Don’t put the scores on records where it isn’t needed.</li> <li>Ensure users understand the limitations and assumptions of the model.</li> </ul> <p>Building predictive models with ML is still a worthy investment. And its cousin gen AI is actually making it easier to do with tools like Cursor and Claude Code (but please do consult a professional). It’s the human work of storytelling and user engagement that will make for a successful deployment.</p> <div class="footnotes" role="doc-endnotes"> <ol> <li id="fn:1"> <p>YEARS later I realize Josh was describing feature engineering in his metaphor of searching for the optimal viewing experience of a <em>Star Wars</em> re-release. Ahead of his time, he was. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p> </li> </ol> </div> </div> </article> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/CRM-marketplace/">Exploring the Fundraising CRM Marketplace in 2026: A Barbell, a Squeeze, and Some Hard Questions</a> </li> </ul> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Jon Garrow. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photo by Rachel Hadiashar. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-writing",
+          title: "writing",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-consulting",
+          title: "consulting",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/consulting/";
+          },
+        },{id: "post-why-machine-learning-models-fail-in-fundraising",
+        
+          title: "Why Machine Learning Models Fail in Fundraising",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ML-models/";
+          
+        },
+      },{id: "post-exploring-the-fundraising-crm-marketplace-in-2026-a-barbell-a-squeeze-and-some-hard-questions",
+        
+          title: "Exploring the Fundraising CRM Marketplace in 2026: A Barbell, a Squeeze, and Some...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/CRM-marketplace/";
+          
+        },
+      },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_godfather/";
+            },},{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
+          description: "",
+          section: "News",},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
+          description: "",
+          section: "News",},{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/jwg973", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/jongarrow", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
