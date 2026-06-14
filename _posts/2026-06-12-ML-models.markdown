@@ -2,7 +2,7 @@
 layout: post
 title:  "Why Machine Learning Models Fail in Fundraising"
 date:   2026-06-12 11:12:50 -0700
-categories: general
+categories: machine-learning
 ---
 
 ## The Inescapable Buzz
