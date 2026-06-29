@@ -9,7 +9,7 @@ categories: insights, data governance
 
 Once, a few weeks into a new job, I got a pretty straightforward request: "Jon, can your team get us the Q2 board report?"
 
-A sudden pit of dread in my stomach. Of course we can produce a report - *but what if no one trusted it?* Because this team had no data dictionary, no practice of documenting data sources, and no established process for data validation. How could *I* trust the data, let alone the board?
+A sudden pit of dread in my stomach. Of course we can produce a report - *but what if no one trusts it?* Because this team had no data dictionary, no practice of documenting data sources, and no established process for data validation. How could *I* trust the data, let alone the board?
 
 We did of course produce the report, but the experience highlighted the importance of building trust in data through clear definitions, documentation, and validation processes. It was not a pleasant experience to deliver a report like this, not knowing how it would be received: Would it match what they were used to? Would the executive team have a dozen questions about the data? Do they prefer bar charts instead of lines?
 
