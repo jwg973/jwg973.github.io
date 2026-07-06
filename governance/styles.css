@@ -1,0 +1,105 @@
+/* ===== PD26 "Power in Perspective" brand styling for Quarto reveal.js ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root{
+  --navy:#0E2841;
+  --blue:#156082;
+  --skyblue:#0F9ED5;
+  --orange:#E97132;
+  --orange-bright:#F8932B;
+  --green:#196B24;
+  --ink:#13202b;
+  --muted:#5b6b78;
+}
+
+.reveal{ font-family:'Roboto', Arial, sans-serif; color:var(--ink); font-size:30px; }
+.reveal h1,.reveal h2,.reveal h3,.reveal h4{
+  font-family:'Roboto Condensed','Roboto', Arial, sans-serif;
+  color:var(--navy); text-transform:none; letter-spacing:.2px; line-height:1.08; font-weight:700;
+}
+.reveal h2{ font-size:1.5em; }
+.reveal h3{ font-size:1.0em; color:var(--blue); }
+.reveal section{ text-align:left; }
+.reveal a{ color:var(--blue); }
+.reveal strong{ color:var(--navy); }
+.reveal em{ color:var(--orange); font-style:normal; font-weight:700; }
+.reveal ul,.reveal ol{ margin-left:.6em; }
+.reveal li{ margin-bottom:.35em; line-height:1.4; }
+
+/* Top accent bar on content slides */
+/* Push slide content down so the bar sits above the text with a clear gap
+   (adjust this value to taste — bigger = more space below the bar). */
+.reveal .slides section.contentbar{ padding-top: 52px; }
+.reveal .slides section.contentbar::before{
+  content:""; position:absolute; top:0; left:0; right:0; height:8px;
+  background:linear-gradient(90deg,var(--navy) 0%,var(--blue) 45%,var(--orange) 100%);
+}
+
+/* Audience badges -> [Everyone]{.aud .everyone} */
+.aud{ display:inline-block; font-family:'Roboto Condensed',sans-serif; font-weight:700;
+  font-size:.5em; letter-spacing:1.5px; text-transform:uppercase; padding:4px 12px;
+  border-radius:40px; color:#fff !important; vertical-align:middle; }
+.aud.everyone{ background:var(--blue); }
+.aud.steward{ background:var(--green); }
+.aud.leader{ background:var(--orange); }
+.badges .aud{ margin-right:8px; opacity:.35; }
+.badges .aud.on{ opacity:1; }
+
+/* Kicker label */
+.kicker{ font-family:'Roboto Condensed',sans-serif; letter-spacing:3px; text-transform:uppercase;
+  color:var(--orange); font-weight:700; font-size:.7em; }
+
+/* Cards -> ::: {.card .leader} */
+.card{ background:rgba(255,255,255,.92); border:1px solid #e3e9ee; border-left:5px solid var(--blue);
+  border-radius:6px; padding:14px 18px; box-shadow:0 2px 10px rgba(14,40,65,.06); }
+.card.everyone{ border-left-color:var(--blue); }
+.card.steward{ border-left-color:var(--green); }
+.card.leader{ border-left-color:var(--orange); }
+.card h3{ margin-top:0; }
+/* Card/column titles (replaces ### headings so reveal.js doesn't make stray slides) */
+.ctitle{ display:block; font-family:'Roboto Condensed','Roboto',sans-serif; font-weight:700;
+  color:var(--blue); font-size:1.05em; line-height:1.12; margin:.1em 0 .35em; }
+.card .ctitle{ margin-top:0; }
+.lab{ font-family:'Roboto Condensed',sans-serif; font-weight:700; font-size:.6em; letter-spacing:1.5px; text-transform:uppercase; }
+.card.everyone .lab{ color:var(--blue); }
+.card.steward .lab{ color:var(--green); }
+.card.leader .lab{ color:var(--orange); }
+
+/* Helpers */
+.small{ font-size:.78em; color:var(--muted); }
+.big{ font-size:1.35em; font-weight:700; color:var(--navy); }
+.ph{ background:#fff5ee; border:1px dashed var(--orange); border-radius:4px; padding:1px 7px;
+  color:var(--orange); font-weight:700; font-size:.9em; }
+.timechip{ display:inline-block; background:var(--navy); color:#fff; font-family:'Roboto Condensed',sans-serif;
+  font-size:.62em; padding:2px 10px; border-radius:30px; margin-right:8px; letter-spacing:1px; }
+
+/* Pause / engagement slide */
+.pause{ text-align:center !important; }
+.pause h2{ color:var(--navy); }
+.pause .kicker{ color:var(--orange); }
+.prompt{ font-size:1.05em; max-width:85%; margin:.4em auto; }
+
+/* Story / anecdote slide */
+.tag{ display:inline-block; background:var(--orange); color:#fff !important; font-family:'Roboto Condensed',sans-serif;
+  letter-spacing:3px; text-transform:uppercase; font-weight:700; font-size:.55em; padding:6px 16px; border-radius:4px; }
+.cue{ color:var(--muted); font-style:italic; }
+
+/* Section divider (navy background) */
+.divider h1,.divider h2,.divider p{ color:#fff !important; }
+.divider .kicker{ color:var(--orange-bright) !important; }
+
+/* Slide 1 = full-bleed brand graphic ONLY. Hide all auto title-slide text. */
+#title-slide .title,
+#title-slide .subtitle,
+#title-slide .quarto-title-authors,
+#title-slide .quarto-title-author-name,
+#title-slide .author,
+#title-slide .date,
+#title-slide .quarto-title-block{ display:none !important; }
+
+/* Clean text title slide (slide 2) — no background image */
+.reveal section.titlepage{ text-align:center; }
+.reveal section.titlepage h2{ font-size:2.7em; color:var(--navy); border:0; margin:0 0 .1em; }
+.tp-sub{ display:block; font-size:1.15em; color:var(--blue); font-weight:500; margin:.1em 0 1.1em; }
+.tp-by{ display:block; font-size:1.05em; color:var(--ink); margin-bottom:.3em; }
+.tp-meta{ display:block; font-size:.8em; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; }

@@ -1,0 +1,749 @@
+---
+# ── HOW TO EDIT THIS DECK · 60-minute session (these # lines are YAML comments; they never render) ──
+# - Each "##" starts a new slide. Edit the text freely like any Markdown doc.
+# - For a box/card title, use a span:  [My title]{.ctitle}
+#   Do NOT use "###" inside a card or column — that creates stray slides and breaks navigation.
+# - Speaker notes live in  ::: notes ... :::  blocks (press S in the browser to view them).
+# - Audience badges:  [Everyone]{.aud .everyone}  [Stewards]{.aud .steward}  [Leaders]{.aud .leader}
+#   Add ".on" to highlight the one a slide targets, e.g. [Leaders]{.aud .leader .on}.
+# - Orange [placeholders] are yours to fill in.
+# - The {...} after a heading sets the slide background/style — copy it for new slides.
+# - Render:  quarto render data-governance-pd26.qmd     Preview:  quarto preview data-governance-pd26.qmd
+title: "The Blueprint for Certainty"
+subtitle: "Building a Data Governance Framework That Actually Works"
+author: "Jon Garrow · Lutheran Community Services NW"
+date: August 12, 2026
+format:
+  revealjs:
+    theme: default
+    css: styles.css
+    slide-number: "c/t"
+    transition: slide
+    background-transition: fade
+    width: 1280
+    height: 720
+    margin: 0.07
+    min-scale: 0.2
+    max-scale: 1.6
+    embed-resources: true          # renders to ONE self-contained .html (easy to host)
+    title-slide-attributes:
+      data-background-image: "img/bg-title.jpg"
+      data-background-size: "cover"
+      data-background-position: "center bottom"
+    include-in-header:
+      text: |
+        <!-- Keep unlisted on jongarrow.com until you're ready -->
+        <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+        <meta name="googlebot" content="noindex, nofollow">
+---
+
+
+## The Blueprint for Certainty {.titlepage}
+
+[Building a Data Governance Framework That Actually Works]{.tp-sub}
+
+[**Jon Garrow** · Lutheran Community Services NW]{.tp-by}
+
+[Apra PD26 · Power in Perspective · Hilton Chicago · August 12, 2026]{.tp-meta}
+
+::: notes
+Clean title slide — the branded graphic stood alone on slide 1; this is where the talk title lands. ~10 sec: name the title, your org, and go.
+:::
+
+
+## Who's talking, and why listen {.contentbar}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Jon Garrow** · Lutheran Community Services NW
+
+- Advancement Operations Leader at Lutheran Community Services NW
+- Previous leadership positions in higher ed and academic medicine
+- MS in Data Science
+:::
+::: {.column width="50%"}
+[Why I care about this]{.kicker}
+
+Other people's data decisions can have profound impacts on our data and our work. To work well across teams, we need shared definitions and processes.
+:::
+::::
+
+::: notes
+~60 seconds. Establish credibility through scars, not titles: "I've made these mistakes so you don't have to." Fill the placeholders before the talk — narrate, don't read.
+:::
+
+
+## Where are you today? {.pause .contentbar}
+
+[Show of hands]{.kicker}
+
+Hands up if data governance is…
+
+[“something other people do”]{.aud .everyone} &nbsp; [“part of my actual job”]{.aud .steward} &nbsp; [“something I'm supposed to lead”]{.aud .leader}
+
+[Team lead, subject-matter expert, or data scientist — you're all somewhere on this map.]{.small}
+
+::: notes
+PAUSE — 90 sec. Quick show of hands for each. Read the room out loud. This anchors the three-audience frame for the whole talk and signals: we all have a role.
+:::
+
+
+## Where we're going — 60 minutes {.contentbar}
+
+- [0–8]{.timechip} Why certainty: trust is the asset
+- [8–18]{.timechip} What a governance framework actually is
+- [18–32]{.timechip} Who builds it: Everyone, Stewards, Leaders
+- [32–46]{.timechip} The **C·A·R·E** framework: consistency, accessibility, retention, ethics
+- [46–55]{.timechip} Breaking ground: making it real without slowing fundraisers
+- [55–60]{.timechip} Commitments & questions
+
+[Everyone]{.aud .everyone} [Stewards]{.aud .steward} [Leaders]{.aud .leader} &nbsp; [— watch these badges; they tell you when a slide is aimed at you.]{.small}
+
+::: notes
+15 seconds. Promise: nobody leaves without one thing they can do Monday. Tell them to note their level so they know which badges to lean into.
+:::
+
+
+## One framework to remember: C·A·R·E {.contentbar}
+
+If you take one thing home, take this. Governance boils down to four questions:
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.card .everyone}
+[C — Consistency]{.ctitle}
+[Are we all speaking the same language — in our database and between systems?]{.small}
+:::
+
+::: {.card .leader}
+[A — Accessibility & Security]{.ctitle}
+[Who sees what? Protect donor privacy *and* arm fundraisers to close.]{.small}
+:::
+:::
+::: {.column width="50%"}
+::: {.card .steward}
+[R — Retention & Minimization]{.ctitle}
+[Do we keep only what's relevant — and agree when to update or purge?]{.small}
+:::
+
+::: {.card .leader}
+[E — Ethics]{.ctitle}
+[Would our constituents approve of how we hold and use their data?]{.small}
+:::
+:::
+::::
+
+
+::: notes
+This is the spine of the talk — the "simplified framework." Say it out loud: Consistency, Accessibility & Security, Retention & Minimization, Ethics. Promise you'll come back and build each one out (that's Part 4). Repeat the acronym; it's the thing you want them quoting in the hallway. ~60–90 sec.
+:::
+
+
+## Why certainty? Because trust is the asset {.divider background-color="#0E2841"}
+
+[Part 1]{.kicker}
+
+Every dashboard, decision, and donor relationship is only as good as your certainty in the data underneath it.
+
+::: notes
+Section divider. Energy up. Thesis of Part 1: governance isn't paperwork — it's how we manufacture trust in our data. "Blueprint for certainty" = the framework that lets people act on data without second-guessing it.
+
+Share my experience of DG feeling very slow and bureaucratic. This is kind of true and also the point.
+:::
+
+
+## Same mission, same need: trust {.contentbar}
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.card}
+[Millions of records]{.ctitle}
+An international NGO, complex systems, a whole data team.
+:::
+:::
+::: {.column width="50%"}
+::: {.card .leader}
+[A focused donor pool]{.ctitle}
+A local food bank, one overworked database manager, a spreadsheet.
+:::
+:::
+::::
+
+[Different scale. Identical need: **everyone has to be able to trust the data.** Strip away the institutional silos and the principles are universal.]{.big}
+
+::: notes
+Lift straight from the session description. The reassurance: this talk is for the food bank AND the NGO. Governance scales down as well as up. Ask: "who here is the whole data team?" — hands usually go up; name them, they need to hear this most.
+:::
+
+
+## It's not just spreadsheets anymore {.contentbar}
+
+Today's dashboards, API integrations, warehouses, and pipelines all rely on one thing: a strong, shared understanding of what our data *means*.
+
+- A field that means two things breaks every report downstream of it
+- An integration silently passing bad data scales the error, fast
+- "I'll just fix the spreadsheet" doesn't survive contact with a pipeline
+
+[Governance is the shared understanding that keeps the whole ecosystem honest.]{.small}
+
+::: notes
+Modernize the stakes — this is not a 2005 "clean the spreadsheet" talk. The more connected your stack, the more a definition mismatch costs. Sets up the "living ecosystem" idea in Part 2.
+:::
+
+
+## When it goes wrong, it goes wrong quietly {.story .contentbar}
+
+[Story]{.tag}
+
+- Departed colleague built a custom prospect assignment logic outside the CRM, and not documented. 
+- A novel definition of region using zip codes didn't align with the rest of the org. 
+- Assignments silently wrong for months, with misalignment between assignments and how we raise money.
+
+[I found out about this roughly when our district directors did. The cost: lost trust and credibility.]{.ph}
+
+::: notes
+ANECDOTE — 2 min. Choose the story with the clearest "cost." Don't moralize; let the room feel the wince. Transition: "None of these were villainy. They were the absence of agreed-upon rules. That's all governance is."
+:::
+
+
+## Your quiet failure {.pause .contentbar}
+
+[Engage · Turn & talk (2 min)]{.kicker}
+
+Turn to one neighbor. Share a time bad, missing, or messy data cost your shop something — money, a relationship, or an afternoon. If you're in higher ed, who defines "alumni" or "former parent"? If you're in healthcare, what counts as a "patient"? If you're at a cause organization, how do you define "donor" or "volunteer"?
+
+**What rule, if it had existed, would have prevented it?**
+
+::: notes
+PAUSE — 2 min (1 min each). Then take 2 from the room. Capture the "rule that would have prevented it" — callback later as governance in plain clothes. Makes governance their idea, not yours.
+:::
+
+
+## What a framework actually is {.divider background-color="#0E2841"}
+
+[Part 2]{.kicker}
+
+Stripping away the frameworks until something useful is left.
+
+::: notes
+Section divider. Goal: demystify. By the end nobody should think this is an IT thing or a compliance thing.
+:::
+
+
+## A definition you can actually use {.contentbar}
+
+[Data governance is the set of *agreements* about how we create, use, share, and protect data — and *who decides* when those agreements are unclear.]{.big}
+
+That's it: **shared rules**, and **clear decision rights**.
+
+[Everything else — policies, councils, stewards, glossaries, tools — is just machinery for producing and enforcing those two things.]{.small}
+
+::: notes
+Slow down. Repeat the definition twice. Reframe: governance = agreements + decision rights. Not software. This is the slide newcomers need most — it lowers the barrier to entry. I'll say it again: the machinery is slow and ponderous. That is ok. It is necessary to get everyone's perspective and buy-in.
+:::
+
+
+## Beyond "fixing spreadsheets": a living ecosystem {.contentbar}
+
+Fixing a spreadsheet is a one-time act. A framework is a living ecosystem — one where data stays:
+
+:::: {.columns}
+::: {.column width="33%"}
+::: {.card .everyone}
+[Clean]{.ctitle}
+Accurate and consistent by default, not by heroic cleanup.
+:::
+:::
+::: {.column width="33%"}
+::: {.card .steward}
+[Compliant]{.ctitle}
+Handled within the rules — legal *and* ethical — without anyone having to think hard.
+:::
+:::
+::: {.column width="33%"}
+::: {.card .leader}
+[Useful]{.ctitle}
+The whole point. Clean and compliant only matter if people can actually *use* the data.
+:::
+:::
+::::
+
+::: notes
+Straight from the description. The reframe people remember: governance isn't janitorial, it's horticultural — you're tending an ecosystem, not mopping a floor. And "useful" is the north star; clean+compliant in service of use. The actual magic of DG comes when you agree to definitions, and then enforce them. Someone will eventually say "next major update to your system, please use the agreed-upon terms and definitions."
+:::
+
+
+## You're already doing it — accidentally {.contentbar}
+
+Every shop has invisible governance:
+
+- The unwritten rule about how to format a name
+- The one person everyone asks before merging records
+- The screening vendor — or the dashboard — you've all decided to trust
+
+[The choice isn't *governance or no governance*. It's *accidental or intentional*.]{.big}
+
+::: notes
+Callback to the turn-and-talk "rules that would have prevented it" — governance, invented too late. The job: make the implicit explicit, before the failure. A framework just makes the accidental intentional.
+:::
+
+
+## Who builds it: three roles {.divider background-color="#0E2841"}
+
+[Part 3]{.kicker}
+
+We all have a role to play. Everyone participates. Stewards tend. Leaders decide.
+
+::: notes
+The heart of the talk — where each audience finds themselves. "Whether you're a team leader, a subject-matter expert, or a data scientist, you'll recognize your seat here."
+:::
+
+
+## Three roles, one system {.contentbar}
+
+:::: {.columns}
+::: {.column width="33%"}
+::: {.card .everyone}
+[Everyone]{.lab}
+[The Participant]{.ctitle}
+[Analysts, data scientists, fundraisers, the rest of us. Follow the agreements, flag what looks wrong, ask before improvising.]{.small}
+:::
+:::
+::: {.column width="33%"}
+::: {.card .steward}
+[Steward]{.lab}
+[The Steward]{.ctitle}
+[Often the subject-matter expert. Owns a slice of the data — defines it, watches its quality, is the "ask-me" person.]{.small}
+:::
+:::
+::: {.column width="33%"}
+::: {.card .leader}
+[Leader]{.lab}
+[The Leader]{.ctitle}
+[Team leads and directors. Set priorities, resolve disputes, secure resources, give stewards air cover. Own the decision rights.]{.small}
+:::
+:::
+::::
+
+[These are *roles*, not job titles. A one-person shop wears all three hats all day.]{.small}
+
+::: notes
+Big idea: roles ≠ titles, and they map onto the personas in the session description (team leader / SME / data scientist). Reassure small shops. Next three slides go deeper on each; lean into yours.
+:::
+
+
+## If you're newer: your job is smaller than you fear {.contentbar}
+
+::: {.badges}
+[Everyone]{.aud .everyone .on} [Stewards]{.aud .steward} [Leaders]{.aud .leader}
+:::
+
+:::: {.columns}
+::: {.column width="55%"}
+[Three habits of a great participant]{.ctitle}
+- **Follow the convention**, even when improvising is faster
+- **Flag, don't fix silently** — surface the weird record, don't quietly patch it
+- **Ask before you assume** what a field means
+:::
+::: {.column width="45%"}
+::: {.card .everyone}
+[Monday action]{.ctitle}
+Find out who is the steward for the data you touch most. If there isn't one, you may have just found your next role.
+:::
+:::
+::::
+
+::: notes
+Speak to the "other people do it" group. Lower the stakes: you don't have to run governance to practice it. You can be a passenger on this ride, asking questions along the way.
+:::
+
+
+## If you're a steward: you're the translation layer {.contentbar}
+
+::: {.badges}
+[Everyone]{.aud .everyone} [Stewards]{.aud .steward .on} [Leaders]{.aud .leader}
+:::
+
+:::: {.columns}
+::: {.column width="55%"}
+[What stewardship really is]{.ctitle}
+- **Define** the data — what does "qualified prospect" mean here?
+- **Defend** its quality — monitor, clean, set the standard
+- **Document** — so knowledge survives your vacation (and your departure)
+- **Decide the small stuff**, escalate the big stuff
+:::
+::: {.column width="45%"}
+::: {.card .steward}
+[The steward's superpower]{.ctitle}
+You turn a leader's policy ("data should be accurate") into a rule a participant can follow ("ratings expire after 24 months").
+:::
+:::
+::::
+
+::: notes
+The working core of most of the room — your subject-matter experts. Emphasize documentation — the bus-factor problem. Stewards make abstract policy operational.
+:::
+
+
+## If you lead: your job is decisions and air cover {.contentbar}
+
+::: {.badges}
+[Everyone]{.aud .everyone} [Stewards]{.aud .steward} [Leaders]{.aud .leader .on}
+:::
+
+:::: {.columns}
+::: {.column width="55%"}
+[What leaders uniquely own]{.ctitle}
+- **Decision rights** — who settles a disagreement
+- **Priorities** — which data problems we fix first
+- **Resources** — time and budget for unglamorous work
+- **Air cover** — backing stewards when "no" is unpopular
+:::
+::: {.column width="45%"}
+::: {.card .leader}
+[The leadership trap]{.ctitle}
+Buying a tool and declaring victory. Governance is decisions and culture; software only enforces decisions you've already made.
+:::
+:::
+::::
+
+::: notes
+For leaders and aspiring leaders. Hardest act: giving stewards air cover when a rule annoys a fundraiser. Decision rights > tooling.
+:::
+
+
+## Who decides at your shop? {.pause .contentbar}
+
+[Raise a hand if it's you]{.kicker}
+
+When two people disagree about what a data field means or how it should be used — **who breaks the tie?** Stand if you can name that person in under five seconds.
+
+::: notes
+PAUSE — 90 sec. Most stay seated. The diagnostic: undefined decision rights are the #1 governance gap. Naming the decider is often the highest-leverage first move. If time, invite a leader to share how they solved it.
+:::
+
+
+## The C·A·R·E framework {.divider background-color="#0E2841"}
+
+[Part 4]{.kicker}
+
+Consistency · Accessibility & Security · Retention & Minimization · Ethics
+
+::: notes
+Section divider. Now we build out the framework we teased earlier. Four walls: C-A-R-E. Brisk pace — ~3 min each. For each: the question it answers + which roles act (watch the badges).
+:::
+
+
+## C · Consistency — data standards & input {.contentbar}
+
+::: {.badges}
+[Everyone]{.aud .everyone .on} [Stewards]{.aud .steward .on} [Leaders]{.aud .leader}
+:::
+
+**Are we all speaking the same language** — inside our database *and* between systems?
+
+- A shared **data dictionary**: what each field means and its valid values
+- Naming, coding, and entry conventions everyone follows
+- One agreed definition for the metrics leadership actually watches
+- Enter it right the first time — *sloppy or stale input is a confident wrong answer*
+
+::: notes
+C — the backbone of every trustworthy dashboard (folds in standards AND input quality). "If 'major gift' means three things to three people, your dashboards are fiction." Stewards own the dictionary; everyone follows it. ~3 min.
+:::
+
+
+## A · Accessibility & Security — who sees what {.contentbar}
+
+::: {.badges}
+[Everyone]{.aud .everyone .on} [Stewards]{.aud .steward} [Leaders]{.aud .leader .on}
+:::
+
+The fine balance: **protect donor privacy** *and* **arm fundraisers to close.** You hold some of the most sensitive information anywhere — net-worth assessments, internal due-diligence notes.
+
+- Right-sized access — not everyone needs everything, especially the sensitive notes
+- A clear path to *grant* and, crucially, to *revoke* when people change roles or leave
+- Sensitive-note discipline: assume anything you type could be read aloud
+
+::: notes
+A — the tension IS the point: too locked down and fundraisers can't work; too open and you betray donor trust. "Read aloud" = FOIA, discovery, donor data requests. Leaders own the access model; everyone practices note discipline. ~3 min.
+:::
+
+
+## R · Retention & Minimization — the data lifecycle {.contentbar}
+
+::: {.badges}
+[Everyone]{.aud .everyone} [Stewards]{.aud .steward .on} [Leaders]{.aud .leader .on}
+:::
+
+Data is an asset — but hoarding old, useless data is a liability. **Minimization:** keep only what's actively relevant and necessary to your fundraising goals.
+
+- **Create:** where does it enter, and who's accountable?
+- **Maintain:** how does it stay current — refresh cadence, re-screening?
+- **Retire:** what gets archived or purged, and when? Agree the rules *before* you need them.
+
+::: notes
+R — lifecycle + data minimization, a major focus for industry groups like Apra. Reframe: retention isn't "keep everything safe," it's "keep only what earns its place." All parties must agree when to retain, update, or purge. Steward + leader conversation. ~3 min.
+:::
+
+
+## E · Ethics — would they approve? {.contentbar}
+
+::: {.badges}
+[Everyone]{.aud .everyone .on} [Stewards]{.aud .steward .on} [Leaders]{.aud .leader .on}
+:::
+
+Compliance is the floor; donor trust is the ceiling. Ethics is our agreement on:
+
+- **What data we *don't* want** — just because it's findable doesn't mean we record it
+- **How we avoid bias** in the data and in anything we build on top of it
+- **The donor test:** would this constituent approve of how we hold and use their data?
+- **Do we all agree** on the ethical boundaries, and who decides when we don't?
+
+::: notes
+E — the wall that earns governance its seat; it ties C-A-R-E to our values. "Donor test" is the memorable heuristic. You're not a lawyer — point leaders to counsel for specifics. Handle with weight, not fear. Leads straight into the turn-and-talk. ~3 min.
+:::
+
+
+## "Can" vs. "should" {.pause .contentbar}
+
+[Turn & talk (2 min)]{.kicker}
+
+Name one piece of information your shop *could* collect on people but maybe *shouldn't*. Where's your line — and who at your org gets to draw it?
+
+::: notes
+PAUSE — 2 min. The applied version of the Ethics wall. Rich discussion: health data, family conflicts, social media, political giving. "Who draws the line" is itself a decision-rights (leader) question. Take 2 examples. Illuminate, don't adjudicate.
+:::
+
+
+## Breaking ground — making it real {.divider background-color="#0E2841"}
+
+[Part 5]{.kicker}
+
+Without the 40-page binder, and without slowing your fundraisers down.
+
+::: notes
+Section divider. The "what do I do Monday" payoff. This is where governance becomes a strategic advantage instead of a someday project.
+:::
+
+
+## Start embarrassingly small {.contentbar}
+
+::: {.badges}
+[Everyone]{.aud .everyone .on} [Stewards]{.aud .steward .on} [Leaders]{.aud .leader .on}
+:::
+
+The failure mode is the 40-page policy nobody reads. The win is one rule, agreed and followed.
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.card}
+[Pick one painful thing]{.ctitle}
+[The most painful symptom of your weakest domain. Just one.]{.small}
+:::
+:::
+::: {.column width="50%"}
+::: {.card}
+[Write one rule + one owner]{.ctitle}
+[One sentence everyone can follow, and one named person who owns it.]{.small}
+:::
+:::
+::::
+
+[Governance grows by precedent, not by proclamation.]{.big}
+
+::: notes
+Antidote to overwhelm. "One rule, one owner." Discourage the big-bang launch. Momentum comes from small visible wins.
+:::
+
+
+## Protect the org without slowing the fundraisers {.contentbar}
+
+::: {.badges}
+[Everyone]{.aud .everyone} [Stewards]{.aud .steward .on} [Leaders]{.aud .leader .on}
+:::
+
+Good policy is felt as *less* friction, not more. Design for the fundraiser's day:
+
+- **Make the right way the easy way** — defaults, dropdowns, templates beat rules-on-paper
+- **Bake rules into the tools**, so people comply without thinking about compliance
+- **Say why, not just what** — "this protects the donor relationship" beats "because policy"
+
+[A policy that slows the work down will be routed around. Every time.]{.small}
+
+::: notes
+Directly from the description: protect the org without slowing fundraisers. The craft of governance is reducing friction while increasing safety — they are not opposites if you design well. Embed rules in the system, not in a binder.
+:::
+
+
+## The honest maturity ladder {.contentbar}
+
+::: {.badges}
+[Everyone]{.aud .everyone} [Stewards]{.aud .steward .on} [Leaders]{.aud .leader .on}
+:::
+
+- **1 · Accidental** — rules exist only in people's heads
+- **2 · Named** — someone is responsible; a few rules are written
+- **3 · Routine** — definitions, a dictionary, a regular cleanup cadence
+- **4 · Governed** — clear decision rights, a council or forum, proactive review
+- **5 · Cultural** — people govern without being told; it's "how we work"
+
+[Goal isn't level 5. It's *one level up* from wherever you are.]{.small}
+
+::: notes
+Let people locate themselves — connects to the opening show of hands. Level 3 is a fine destination for many shops. The ask is +1, not perfection.
+:::
+
+
+## From "someday" to strategic advantage {.contentbar}
+
+The mature end state isn't a thicker rulebook — it's an organization that can *trust its own data* and move faster because of it.
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.card .everyone}
+[Make it about the mission]{.ctitle}
+Good data = more funding for the cause. That's the why that sticks.
+:::
+:::
+::: {.column width="50%"}
+::: {.card .leader}
+[Celebrate the catch]{.ctitle}
+Praise the person who flagged the problem. What you celebrate, you get more of.
+:::
+:::
+::::
+
+[Governance stops being a "someday" project the moment it makes someone's job easier today.]{.small}
+
+::: notes
+Land the description's closing promise: governance as strategic advantage that empowers the whole team. Connect every rule to mission. "Celebrate the catch" reverses the data-police dynamic. Toyota model where anyone can stop the line if they see a defect. ~90 sec.
+:::
+
+
+## Jargon you'll hear — a quick decoder {.contentbar}
+
+[Governance has its own vocabulary. None of it is complicated:]{.small}
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.card .steward}
+[Data steward]{.ctitle}
+[The person who owns a slice of data — defines it, guards its quality, the "ask-me" expert.]{.small}
+:::
+
+::: {.card}
+[Artifact]{.ctitle}
+[A tangible governance output you can point to: a data dictionary, a policy, a decision log.]{.small}
+:::
+
+::: {.card}
+[Rituals]{.ctitle}
+[The recurring habits that keep it alive: a monthly data-quality review, a standing definitions huddle.]{.small}
+:::
+:::
+::: {.column width="50%"}
+::: {.card .leader}
+[PII]{.ctitle}
+[Personally Identifiable Information — anything that identifies a person (name, address, SSN). Handle with extra care.]{.small}
+:::
+
+::: {.card}
+[Lineage]{.ctitle}
+[A data point's paper trail: where it came from and how it flows — source → warehouse → dashboard.]{.small}
+:::
+
+::: {.card .leader}
+[Charter]{.ctitle}
+[The one-page founding doc: why governance exists, who decides, and what's in scope.]{.small}
+:::
+:::
+::::
+
+::: notes
+~90 sec, light and fast — this is a "you'll hear these" decoder, not a quiz. Tie a few back to C·A·R·E: a charter names decision rights; lineage underpins Consistency; PII lives under Accessibility & Security; rituals and artifacts are how stewards keep it all alive. Much of this comes from DAMA-DMBOK, which is worth a look if you want to go deeper.
+:::
+
+
+## Your move {.divider background-color="#0E2841"}
+
+[Part 6]{.kicker}
+
+One commitment, three altitudes.
+
+::: notes
+Section divider into the close. Bring the energy home. Make them commit to one concrete thing.
+:::
+
+
+## One thing, by Monday {.pause .contentbar}
+
+[Engage · Commit (write it down)]{.kicker}
+
+[Everyone]{.aud .everyone} — one habit you'll fix.
+
+[Stewards]{.aud .steward} — one rule you'll document.
+
+[Leaders]{.aud .leader} — one decision-right you'll name.
+
+[Write it on whatever's in front of you. Tell the person next to you.]{.small}
+
+::: notes
+PAUSE — 90 sec. Make everyone physically write something and say it aloud to a neighbor — accountability. The payoff of the three-audience design: each level leaves with a right-sized commitment.
+:::
+
+
+## If you remember three things {.contentbar}
+
+1. **Governance = agreements + decision rights.** Not software, not the data police.
+2. **Remember C·A·R·E** — Consistency, Accessibility & Security, Retention & Minimization, Ethics. Four questions that keep data trustworthy and *useful*.
+3. **Everyone, steward, leader.** Find your seat, take one small action, give the champion air cover.
+
+[The blueprint for certainty is simpler than it looks: **C·A·R·E** — and you can lay the first brick Monday.]{.big}
+
+::: notes
+The three-sentence summary. Say each slowly, and say the acronym out loud again — C-A-R-E bookends the whole talk. End on the blueprint/certainty line, circling back to the title. The sentence you want them quoting in the hallway.
+:::
+
+
+## Questions & war stories {.contentbar}
+
+**Jon Garrow** · Lutheran Community Services NW
+
+jg@jongarrow.com · https://www.linkedin.com/in/jongarrow/ · jongarrow.com
+
+::: notes
+Leave ~5 min. If questions are slow, prime the pump: "What's the governance fight happening at your shop right now?" Capture good questions to follow up.
+:::
+
+
+## Take this with you {.contentbar}
+
+:::: {.columns}
+::: {.column width="50%"}
+[Frameworks worth a look]{.ctitle}
+
+- DAMA-DMBOK (data management body of knowledge)
+
+- Apra's body of knowledge & ethics statements
+
+- Your sector's privacy guidance (GDPR/CCPA + nonprofit norms)
+:::
+::: {.column width="50%"}
+[Start-here checklist]{.ctitle}
+
+- Name your decider
+
+- Write your first dictionary entry
+
+- Pick one rule, one owner
+
+- Bake one rule into a tool, not a binder
+
+- Celebrate the next person who flags a problem
+:::
+::::
+
+
+::: notes
+Optional — skip if short on time, keep as a leave-behind on the posted slides. Verify framework names/links before posting.
+:::
