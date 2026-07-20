@@ -191,7 +191,7 @@ Modernize the stakes — this is not a 2005 "clean the spreadsheet" talk. The mo
 :::
 
 
-## When it goes wrong, it goes wrong quietly {.story .contentbar}
+## When it goes wrong, you may not know it {.story .contentbar}
 
 [Story]{.tag}
 
@@ -206,7 +206,7 @@ ANECDOTE — 2 min. Choose the story with the clearest "cost." Don't moralize; l
 :::
 
 
-## Your quiet failure {.pause .contentbar}
+## Your background data failure {.pause .contentbar}
 
 [Engage · Turn & talk (2 min)]{.kicker}
 
