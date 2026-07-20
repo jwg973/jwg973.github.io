@@ -8,11 +8,11 @@
 #   Add ".on" to highlight the one a slide targets, e.g. [Leaders]{.aud .leader .on}.
 # - Orange [placeholders] are yours to fill in.
 # - The {...} after a heading sets the slide background/style — copy it for new slides.
-# - Render:  quarto render data-governance-pd26.qmd     Preview:  quarto preview data-governance-pd26.qmd
+# - Render:  quarto render index.qmd     Preview:  quarto preview index.qmd
 title: "The Blueprint for Certainty"
 subtitle: "Building a Data Governance Framework That Actually Works"
 author: "Jon Garrow · Lutheran Community Services NW"
-date: August 12, 2026
+date: "August 12, 2026"
 format:
   revealjs:
     theme: default
@@ -195,8 +195,8 @@ Modernize the stakes — this is not a 2005 "clean the spreadsheet" talk. The mo
 
 [Story]{.tag}
 
-- Departed colleague built a custom prospect assignment logic outside the CRM, and not documented. 
-- A novel definition of region using zip codes didn't align with the rest of the org. 
+- Departed colleague built a custom prospect assignment logic outside the CRM, and not documented.
+- A novel definition of region using zip codes didn't align with the rest of the org.
 - Assignments silently wrong for months, with misalignment between assignments and how we raise money.
 
 [I found out about this roughly when our district directors did. The cost: lost trust and credibility.]{.ph}
@@ -341,6 +341,7 @@ Big idea: roles ≠ titles, and they map onto the personas in the session descri
 :::: {.columns}
 ::: {.column width="55%"}
 [Three habits of a great participant]{.ctitle}
+
 - **Follow the convention**, even when improvising is faster
 - **Flag, don't fix silently** — surface the weird record, don't quietly patch it
 - **Ask before you assume** what a field means
@@ -367,6 +368,7 @@ Speak to the "other people do it" group. Lower the stakes: you don't have to run
 :::: {.columns}
 ::: {.column width="55%"}
 [What stewardship really is]{.ctitle}
+
 - **Define** the data — what does "qualified prospect" mean here?
 - **Defend** its quality — monitor, clean, set the standard
 - **Document** — so knowledge survives your vacation (and your departure)
@@ -394,6 +396,7 @@ The working core of most of the room — your subject-matter experts. Emphasize 
 :::: {.columns}
 ::: {.column width="55%"}
 [What leaders uniquely own]{.ctitle}
+
 - **Decision rights** — who settles a disagreement
 - **Priorities** — which data problems we fix first
 - **Resources** — time and budget for unglamorous work
