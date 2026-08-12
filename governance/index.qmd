@@ -644,10 +644,6 @@ Land the description's closing promise: governance as strategic advantage that e
 [The one-page founding doc: why governance exists, who decides, and what's in scope.]{.small}
 :::
 
-::: {.card}
-[PHI]{.ctitle}
-[Protected Health Information — any information about health status, provision of healthcare, or payment for healthcare that can be linked to an individual. Handle with extra care.]{.small}
-:::
 :::
 ::::
 
