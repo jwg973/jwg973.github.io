@@ -183,8 +183,6 @@ Today's dashboards, API integrations, warehouses, and pipelines all rely on one 
 - An integration silently passing bad data scales the error, fast
 - "I'll just fix the spreadsheet" doesn't survive contact with a pipeline
 
-[Governance is the shared understanding that keeps the whole ecosystem honest.]{.small}
-
 ::: notes
 Modernize the stakes — this is not a 2005 "clean the spreadsheet" talk. The more connected your stack, the more a definition mismatch costs. Sets up the "living ecosystem" idea in Part 2.
 :::
