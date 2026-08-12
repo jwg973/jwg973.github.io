@@ -151,7 +151,7 @@ Share my experience of DG feeling very slow and bureaucratic. This is kind of tr
 :::
 
 
-## Same mission, same need: trust {.contentbar}
+## Different mission, same need: trust {.contentbar}
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -168,7 +168,7 @@ A local food bank, one overworked database manager, a spreadsheet.
 :::
 ::::
 
-[Different scale. Identical need: **everyone has to be able to trust the data.** Strip away the institutional silos and the principles are universal.]{.big}
+[Different scale, identical need: **everyone has to be able to trust the data.** Strip away the institutional silos and the principles are universal.]{.big}
 
 ::: notes
 Lift straight from the session description. The reassurance: this talk is for the food bank AND the NGO. Governance scales down as well as up. Ask: "who here is the whole data team?" — hands usually go up; name them, they need to hear this most.
