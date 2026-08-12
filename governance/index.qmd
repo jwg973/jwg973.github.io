@@ -42,7 +42,7 @@ format:
 
 [Building a Data Governance Framework That Actually Works]{.tp-sub}
 
-[**Jon Garrow** · Lutheran Community Services NW]{.tp-by}
+[**Jon Garrow (he/him)** · Lutheran Community Services NW]{.tp-by}
 
 [Apra PD26 · Power in Perspective · Hilton Chicago · August 12, 2026]{.tp-meta}
 
@@ -51,7 +51,7 @@ Clean title slide — the branded graphic stood alone on slide 1; this is where 
 :::
 
 
-## Who's talking, and why listen {.contentbar}
+## Who's talking {.contentbar}
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -81,7 +81,6 @@ Hands up if data governance is…
 
 [“something other people do”]{.aud .everyone} &nbsp; [“part of my actual job”]{.aud .steward} &nbsp; [“something I'm supposed to lead”]{.aud .leader}
 
-[Team lead, subject-matter expert, or data scientist — you're all somewhere on this map.]{.small}
 
 ::: notes
 PAUSE — 90 sec. Quick show of hands for each. Read the room out loud. This anchors the three-audience frame for the whole talk and signals: we all have a role.
@@ -97,7 +96,7 @@ PAUSE — 90 sec. Quick show of hands for each. Read the room out loud. This anc
 - [46–55]{.timechip} Breaking ground: making it real without slowing fundraisers
 - [55–60]{.timechip} Commitments & questions
 
-[Everyone]{.aud .everyone} [Stewards]{.aud .steward} [Leaders]{.aud .leader} &nbsp; [— watch these badges; they tell you when a slide is aimed at you.]{.small}
+[Everyone]{.aud .everyone} [Stewards]{.aud .steward} [Leaders]{.aud .leader} 
 
 ::: notes
 15 seconds. Promise: nobody leaves without one thing they can do Monday. Tell them to note their level so they know which badges to lean into.
@@ -116,13 +115,13 @@ If you take one thing home, take this. Governance boils down to four questions:
 :::
 
 ::: {.card .leader}
-[A — Accessibility & Security]{.ctitle}
+[A — Access]{.ctitle}
 [Who sees what? Protect donor privacy *and* arm fundraisers to close.]{.small}
 :::
 :::
 ::: {.column width="50%"}
 ::: {.card .steward}
-[R — Retention & Minimization]{.ctitle}
+[R — Retention]{.ctitle}
 [Do we keep only what's relevant — and agree when to update or purge?]{.small}
 :::
 
@@ -135,7 +134,7 @@ If you take one thing home, take this. Governance boils down to four questions:
 
 
 ::: notes
-This is the spine of the talk — the "simplified framework." Say it out loud: Consistency, Accessibility & Security, Retention & Minimization, Ethics. Promise you'll come back and build each one out (that's Part 4). Repeat the acronym; it's the thing you want them quoting in the hallway. ~60–90 sec.
+This is the spine of the talk — the "simplified framework." Say it out loud: Consistency, Access, Retention, Ethics. Promise you'll come back and build each one out (that's Part 4). Repeat the acronym; it's the thing you want them quoting in the hallway. ~60–90 sec.
 :::
 
 
@@ -191,15 +190,12 @@ Modernize the stakes — this is not a 2005 "clean the spreadsheet" talk. The mo
 :::
 
 
-## When it goes wrong, you may not know it {.story .contentbar}
+## When it goes wrong, you may not notice it {.story .contentbar}
 
 [Story]{.tag}
 
-- Departed colleague built a custom prospect assignment logic outside the CRM, and not documented.
-- A novel definition of region using zip codes didn't align with the rest of the org.
-- Assignments silently wrong for months, with misalignment between assignments and how we raise money.
+- The automated data feed from CRM to finance to "save us time" started passing bad data
 
-[I found out about this roughly when our district directors did. The cost: lost trust and credibility.]{.ph}
 
 ::: notes
 ANECDOTE — 2 min. Choose the story with the clearest "cost." Don't moralize; let the room feel the wince. Transition: "None of these were villainy. They were the absence of agreed-upon rules. That's all governance is."
@@ -235,8 +231,6 @@ Section divider. Goal: demystify. By the end nobody should think this is an IT t
 [Data governance is the set of *agreements* about how we create, use, share, and protect data — and *who decides* when those agreements are unclear.]{.big}
 
 That's it: **shared rules**, and **clear decision rights**.
-
-[Everything else — policies, councils, stewards, glossaries, tools — is just machinery for producing and enforcing those two things.]{.small}
 
 ::: notes
 Slow down. Repeat the definition twice. Reframe: governance = agreements + decision rights. Not software. This is the slide newcomers need most — it lowers the barrier to entry. I'll say it again: the machinery is slow and ponderous. That is ok. It is necessary to get everyone's perspective and buy-in.
@@ -324,8 +318,6 @@ The heart of the talk — where each audience finds themselves. "Whether you're 
 :::
 :::
 ::::
-
-[These are *roles*, not job titles. A one-person shop wears all three hats all day.]{.small}
 
 ::: notes
 Big idea: roles ≠ titles, and they map onto the personas in the session description (team leader / SME / data scientist). Reassure small shops. Next three slides go deeper on each; lean into yours.
@@ -419,7 +411,7 @@ For leaders and aspiring leaders. Hardest act: giving stewards air cover when a 
 
 [Raise a hand if it's you]{.kicker}
 
-When two people disagree about what a data field means or how it should be used — **who breaks the tie?** Stand if you can name that person in under five seconds.
+When two people disagree about what a data field means or how it should be used — **who breaks the tie?** Raise a hand if you can name that person in under five seconds.
 
 ::: notes
 PAUSE — 90 sec. Most stay seated. The diagnostic: undefined decision rights are the #1 governance gap. Naming the decider is often the highest-leverage first move. If time, invite a leader to share how they solved it.
@@ -455,7 +447,7 @@ C — the backbone of every trustworthy dashboard (folds in standards AND input 
 :::
 
 
-## A · Accessibility & Security — who sees what {.contentbar}
+## A · Access — who sees what {.contentbar}
 
 ::: {.badges}
 [Everyone]{.aud .everyone .on} [Stewards]{.aud .steward} [Leaders]{.aud .leader .on}
@@ -472,7 +464,7 @@ A — the tension IS the point: too locked down and fundraisers can't work; too 
 :::
 
 
-## R · Retention & Minimization — the data lifecycle {.contentbar}
+## R · Retention — the data lifecycle {.contentbar}
 
 ::: {.badges}
 [Everyone]{.aud .everyone} [Stewards]{.aud .steward .on} [Leaders]{.aud .leader .on}
@@ -485,7 +477,7 @@ Data is an asset — but hoarding old, useless data is a liability. **Minimizati
 - **Retire:** what gets archived or purged, and when? Agree the rules *before* you need them.
 
 ::: notes
-R — lifecycle + data minimization, a major focus for industry groups like Apra. Reframe: retention isn't "keep everything safe," it's "keep only what earns its place." All parties must agree when to retain, update, or purge. Steward + leader conversation. ~3 min.
+R — lifecycle + data minimization, a major focus for industry groups like Apra. Reframe: retention isn't "keep everything," it's "keep only what earns its place." All parties must agree when to retain, update, or purge. Steward + leader conversation. ~3 min.
 :::
 
 
@@ -535,7 +527,7 @@ Section divider. The "what do I do Monday" payoff. This is where governance beco
 [Everyone]{.aud .everyone .on} [Stewards]{.aud .steward .on} [Leaders]{.aud .leader .on}
 :::
 
-The failure mode is the 40-page policy nobody reads. The win is one rule, agreed and followed.
+Failure is the 40-page policy nobody reads. The win is one rule, agreed and followed.
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -571,26 +563,22 @@ Good policy is felt as *less* friction, not more. Design for the fundraiser's da
 - **Bake rules into the tools**, so people comply without thinking about compliance
 - **Say why, not just what** — "this protects the donor relationship" beats "because policy"
 
-[A policy that slows the work down will be routed around. Every time.]{.small}
-
 ::: notes
 Directly from the description: protect the org without slowing fundraisers. The craft of governance is reducing friction while increasing safety — they are not opposites if you design well. Embed rules in the system, not in a binder.
 :::
 
 
-## The honest maturity ladder {.contentbar}
+## The data governance maturity ladder {.contentbar}
 
 ::: {.badges}
 [Everyone]{.aud .everyone} [Stewards]{.aud .steward .on} [Leaders]{.aud .leader .on}
 :::
 
-- **1 · Accidental** — rules exist only in people's heads
-- **2 · Named** — someone is responsible; a few rules are written
-- **3 · Routine** — definitions, a dictionary, a regular cleanup cadence
-- **4 · Governed** — clear decision rights, a council or forum, proactive review
 - **5 · Cultural** — people govern without being told; it's "how we work"
-
-[Goal isn't level 5. It's *one level up* from wherever you are.]{.small}
+- **4 · Governed** — clear decision rights, a council or forum, proactive review
+- **3 · Routine** — definitions, a dictionary, a regular cleanup cadence
+- **2 · Named** — someone is responsible; a few rules are written
+- **1 · Accidental** — rules exist only in people's heads
 
 ::: notes
 Let people locate themselves — connects to the opening show of hands. Level 3 is a fine destination for many shops. The ask is +1, not perfection.
@@ -615,8 +603,6 @@ Praise the person who flagged the problem. What you celebrate, you get more of.
 :::
 :::
 ::::
-
-[Governance stops being a "someday" project the moment it makes someone's job easier today.]{.small}
 
 ::: notes
 Land the description's closing promise: governance as strategic advantage that empowers the whole team. Connect every rule to mission. "Celebrate the catch" reverses the data-police dynamic. Toyota model where anyone can stop the line if they see a defect. ~90 sec.
@@ -659,6 +645,10 @@ Land the description's closing promise: governance as strategic advantage that e
 [Charter]{.ctitle}
 [The one-page founding doc: why governance exists, who decides, and what's in scope.]{.small}
 :::
+
+::: {.card}
+[PHI]{.ctitle}
+[Protected Health Information — any information about health status, provision of healthcare, or payment for healthcare that can be linked to an individual. Handle with extra care.]{.small}
 :::
 ::::
 
@@ -682,13 +672,11 @@ Section divider into the close. Bring the energy home. Make them commit to one c
 
 [Engage · Commit (write it down)]{.kicker}
 
-[Everyone]{.aud .everyone} — one habit you'll fix.
+[Everyone]{.aud .everyone} — one habit you'll fix or question you'll ask.
 
 [Stewards]{.aud .steward} — one rule you'll document.
 
 [Leaders]{.aud .leader} — one decision-right you'll name.
-
-[Write it on whatever's in front of you. Tell the person next to you.]{.small}
 
 ::: notes
 PAUSE — 90 sec. Make everyone physically write something and say it aloud to a neighbor — accountability. The payoff of the three-audience design: each level leaves with a right-sized commitment.
@@ -698,7 +686,7 @@ PAUSE — 90 sec. Make everyone physically write something and say it aloud to a
 ## If you remember three things {.contentbar}
 
 1. **Governance = agreements + decision rights.** Not software, not the data police.
-2. **Remember C·A·R·E** — Consistency, Accessibility & Security, Retention & Minimization, Ethics. Four questions that keep data trustworthy and *useful*.
+2. **Remember C·A·R·E** — Consistency, Access, Retention, Ethics. Four questions that keep data trustworthy and *useful*.
 3. **Everyone, steward, leader.** Find your seat, take one small action, give the champion air cover.
 
 [The blueprint for certainty is simpler than it looks: **C·A·R·E** — and you can lay the first brick Monday.]{.big}
