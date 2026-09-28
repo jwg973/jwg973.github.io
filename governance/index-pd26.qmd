@@ -12,7 +12,7 @@
 title: "The Blueprint for Certainty"
 subtitle: "Building a Data Governance Framework That Actually Works"
 author: "Jon Garrow · Lutheran Community Services NW"
-date: "October 6, 2026"
+date: "August 12, 2026"
 format:
   revealjs:
     theme: default
@@ -26,6 +26,10 @@ format:
     min-scale: 0.2
     max-scale: 1.6
     embed-resources: true          # renders to ONE self-contained .html (easy to host)
+    title-slide-attributes:
+      data-background-image: "img/bg-title.jpg"
+      data-background-size: "cover"
+      data-background-position: "center bottom"
     include-in-header:
       text: |
         <!-- Keep unlisted on jongarrow.com until you're ready -->
@@ -40,7 +44,7 @@ format:
 
 [**Jon Garrow (he/him)** · Lutheran Community Services NW]{.tp-by}
 
-[Apra NW · October 6, 2026]{.tp-meta}
+[Apra PD26 · Power in Perspective · Hilton Chicago · August 12, 2026]{.tp-meta}
 
 ::: notes
 Clean title slide — the branded graphic stood alone on slide 1; this is where the talk title lands. ~10 sec: name the title, your org, and go.
@@ -55,7 +59,7 @@ Clean title slide — the branded graphic stood alone on slide 1; this is where 
 
 - Advancement Operations Leader at Lutheran Community Services NW
 - Previous leadership positions in higher ed and academic medicine
-- MS in Data Science, MA in Philanthropy Studies
+- MS in Data Science
 :::
 ::: {.column width="50%"}
 [Why I care about this]{.kicker}
@@ -65,7 +69,7 @@ Other people's data decisions can have profound impacts on our data and our work
 ::::
 
 ::: notes
-~60 seconds. Why you care about this: DG is coming for you. Like a CRM conversion: even if your current org doesn't have a formal program, you are very likely to find one at your next org. The talk is about how to make it work for you, not against you.
+~60 seconds. Establish credibility through scars, not titles: "I've made these mistakes so you don't have to." Fill the placeholders before the talk — narrate, don't read.
 :::
 
 
@@ -130,7 +134,7 @@ If you take one thing home, take this. Governance boils down to four questions:
 
 
 ::: notes
-This is the spine of the talk — the "simplified framework." Say it out loud: Consistency, Access, Retention, Ethics. Promise you'll come back and build each one out (that's Part 4). 
+This is the spine of the talk — the "simplified framework." Say it out loud: Consistency, Access, Retention, Ethics. Promise you'll come back and build each one out (that's Part 4). Repeat the acronym; it's the thing you want them quoting in the hallway. ~60–90 sec.
 :::
 
 
@@ -138,7 +142,7 @@ This is the spine of the talk — the "simplified framework." Say it out loud: C
 
 [Part 1]{.kicker}
 
-Every dashboard, decision, and donor relationship is only as good as your certainty in the data underneath it. If a colleague on a different team is using the same data but interpreting it differently, you have a problem. If your dashboards are built on a field that means two different things to two different people, you have a problem. If your donor data is messy and inconsistent, you have a problem.
+Every dashboard, decision, and donor relationship is only as good as your certainty in the data underneath it.
 
 ::: notes
 Section divider. Energy up. Thesis of Part 1: governance isn't paperwork — it's how we manufacture trust in our data. "Blueprint for certainty" = the framework that lets people act on data without second-guessing it.
@@ -200,7 +204,7 @@ ANECDOTE — 2 min. Choose the story with the clearest "cost." Don't moralize; l
 
 [Engage · Turn & talk (2 min)]{.kicker}
 
-Chime in in the comments. Share a time bad, missing, or messy data cost your shop something — money, a relationship, or an afternoon. If you're in higher ed, who defines "alumni" or "former parent"? If you're in healthcare, what counts as a "patient"? If you're at a cause organization, how do you define "opt-out" or "restricted gift"?
+Turn to one neighbor. Share a time bad, missing, or messy data cost your shop something — money, a relationship, or an afternoon. If you're in higher ed, who defines "alumni" or "former parent"? If you're in healthcare, what counts as a "patient"? If you're at a cause organization, how do you define "donor" or "volunteer"?
 
 **What rule, if it had existed, would have prevented it?**
 
@@ -227,8 +231,9 @@ Section divider. Goal: demystify. By the end nobody should think this is an IT t
 That's it: **shared rules**, and **clear decision rights**.
 
 ::: notes
-Slow down. Repeat the definition twice. Reframe: governance = agreements + decision rights. Not software. This is the slide newcomers need most — it lowers the barrier to entry. I'll say it again: the machinery is slow and ponderous. That is ok. It is necessary to get everyone's perspective and buy-in. Once we have those agreements, that gives us a path to address questions and disagreements. The agreements are the rules, and the decision rights are the people who get to make the call when the rules aren't clear.
+Slow down. Repeat the definition twice. Reframe: governance = agreements + decision rights. Not software. This is the slide newcomers need most — it lowers the barrier to entry. I'll say it again: the machinery is slow and ponderous. That is ok. It is necessary to get everyone's perspective and buy-in.
 :::
+
 
 ## Beyond "fixing spreadsheets": a living ecosystem {.contentbar}
 
