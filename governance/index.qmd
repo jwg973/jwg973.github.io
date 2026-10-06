@@ -1,18 +1,5 @@
 ---
-# ── HOW TO EDIT THIS DECK · 60-minute session (these # lines are YAML comments; they never render) ──
-# - Each "##" starts a new slide. Edit the text freely like any Markdown doc.
-# - For a box/card title, use a span:  [My title]{.ctitle}
-#   Do NOT use "###" inside a card or column — that creates stray slides and breaks navigation.
-# - Speaker notes live in  ::: notes ... :::  blocks (press S in the browser to view them).
-# - Audience badges:  [Everyone]{.aud .everyone}  [Stewards]{.aud .steward}  [Leaders]{.aud .leader}
-#   Add ".on" to highlight the one a slide targets, e.g. [Leaders]{.aud .leader .on}.
-# - Orange [placeholders] are yours to fill in.
-# - The {...} after a heading sets the slide background/style — copy it for new slides.
-# - Render:  quarto render index.qmd     Preview:  quarto preview index.qmd
-title: "The Blueprint for Certainty"
-subtitle: "Building a Data Governance Framework That Actually Works"
-author: "Jon Garrow · Lutheran Community Services NW"
-date: "October 6, 2026"
+pagetitle: "The Blueprint for Certainty"
 format:
   revealjs:
     theme: default
@@ -32,8 +19,6 @@ format:
         <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
         <meta name="googlebot" content="noindex, nofollow">
 ---
-
-
 ## The Blueprint for Certainty {.titlepage}
 
 [Building a Data Governance Framework That Actually Works]{.tp-sub}
@@ -41,11 +26,6 @@ format:
 [**Jon Garrow (he/him)** · Lutheran Community Services NW]{.tp-by}
 
 [Apra NW · October 6, 2026]{.tp-meta}
-
-::: notes
-Clean title slide — the branded graphic stood alone on slide 1; this is where the talk title lands. ~10 sec: name the title, your org, and go.
-:::
-
 
 ## Who's talking {.contentbar}
 
@@ -65,7 +45,7 @@ Other people's data decisions can have profound impacts on our data and our work
 ::::
 
 ::: notes
-~60 seconds. Why you care about this: DG is coming for you. Like a CRM conversion: even if your current org doesn't have a formal program, you are very likely to find one at your next org. The talk is about how to make it work for you, not against you.
+~60 seconds. About LCSNW - complicated org, many mergers. The impacts of bad DG can make our days miserable if we're always having to translate an old code into something new, or work around bad data. Those aren't the things we want to deal with. DG started to come together in the 2000s, and became much more important in the age of AI. Like many concepts, it has become widespread in the nonprofit sector around 20 years after the corporate sector. DG is coming for you. Like a CRM conversion: even if your current org doesn't have a formal program, you are very likely to find one at your next org. The talk is about how to make it work for you, not against you. We'll talk about the formal program you might experience, but DG doesn't have to be a formal program to be effective. It's about shared definitions and processes, not a bunch of 65-minute meetings.
 :::
 
 
@@ -101,7 +81,7 @@ PAUSE — 90 sec. Quick show of hands for each. Read the room out loud. This anc
 
 ## One framework to remember: C·A·R·E {.contentbar}
 
-If you take one thing home, take this. Governance boils down to four questions:
+Governance boils down to four questions:
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -138,12 +118,16 @@ This is the spine of the talk — the "simplified framework." Say it out loud: C
 
 [Part 1]{.kicker}
 
-Every dashboard, decision, and donor relationship is only as good as your certainty in the data underneath it. If a colleague on a different team is using the same data but interpreting it differently, you have a problem. If your dashboards are built on a field that means two different things to two different people, you have a problem. If your donor data is messy and inconsistent, you have a problem.
+Every dashboard, decision, and donor relationship is only as good as your certainty in the data underneath it.
 
 ::: notes
-Section divider. Energy up. Thesis of Part 1: governance isn't paperwork — it's how we manufacture trust in our data. "Blueprint for certainty" = the framework that lets people act on data without second-guessing it.
+Thesis of Part 1: governance isn't paperwork and meetings — it's how we manufacture trust in our data. "Blueprint for certainty" = the framework that lets people act on data without second-guessing it.
 
 Share my experience of DG feeling very slow and bureaucratic. This is kind of true and also the point.
+
+ If a colleague on a different team is using the same data but interpreting it differently, you have a problem. If your dashboards are built on a field that means two different things to two different people, you have a problem. If your donor data is messy and inconsistent, you have a problem.
+
+ The data needs to be both accurate and correctly understood in order for people to trust it.
 :::
 
 
@@ -159,28 +143,28 @@ An international NGO, complex systems, a whole data team.
 ::: {.column width="50%"}
 ::: {.card .leader}
 [A focused donor pool]{.ctitle}
-A local food bank, one overworked database manager, a spreadsheet.
+A local library foundation, one overworked database manager, a simple CRM.
 :::
 :::
 ::::
 
-[Different scale, identical need: **everyone has to be able to trust the data.** Strip away the institutional silos and the principles are universal.]{.big}
+[Different scale, identical need: **everyone has to be able to trust the data.** 
 
 ::: notes
-Lift straight from the session description. The reassurance: this talk is for the food bank AND the NGO. Governance scales down as well as up. Ask: "who here is the whole data team?" — hands usually go up; name them, they need to hear this most.
+The reassurance: this talk is for the library foundation AND the NGO. Governance scales down as well as up. Ask: "who here is the whole data team?" — hands usually go up; name them, they need to hear this most.
 :::
 
 
 ## It's not just spreadsheets anymore {.contentbar}
 
-Today's dashboards, API integrations, warehouses, and pipelines all rely on one thing: a strong, shared understanding of what our data *means*.
+Today's dashboards, API integrations, warehouses, lakes, and pipelines all rely on one thing: a strong, shared understanding of what our data *means*.
 
 - A field that means two things breaks every report downstream of it
-- An integration silently passing bad data scales the error, fast
+- An integration passing bad data scales the error, fast
 - "I'll just fix the spreadsheet" doesn't survive contact with a pipeline
 
 ::: notes
-Modernize the stakes — this is not a 2005 "clean the spreadsheet" talk. The more connected your stack, the more a definition mismatch costs. Sets up the "living ecosystem" idea in Part 2.
+Modernize the stakes — this is not a 2006 "clean the spreadsheet" talk. The more connected your stack, the more a definition mismatch costs. Sets up the "living ecosystem" idea in Part 2.
 :::
 
 
@@ -188,24 +172,22 @@ Modernize the stakes — this is not a 2005 "clean the spreadsheet" talk. The mo
 
 [Story]{.tag}
 
-- The automated data feed from CRM to finance to "save us time" started passing bad data
 
 
 ::: notes
-ANECDOTE — 2 min. Choose the story with the clearest "cost." Don't moralize; let the room feel the wince. Transition: "None of these were villainy. They were the absence of agreed-upon rules. That's all governance is."
+ANECDOTE — 2 min. 
+- The automated data feed from CRM to finance to "save us time" started passing bad data because it was designed wrong and didn't account for new table values on gift records. Hundreds of gifts had been miscoded.
 :::
 
 
 ## Your background data failure {.pause .contentbar}
 
-[Engage · Turn & talk (2 min)]{.kicker}
-
-Chime in in the comments. Share a time bad, missing, or messy data cost your shop something — money, a relationship, or an afternoon. If you're in higher ed, who defines "alumni" or "former parent"? If you're in healthcare, what counts as a "patient"? If you're at a cause organization, how do you define "opt-out" or "restricted gift"?
+[Anonymous Share in Chat (2 min)]{.kicker}
 
 **What rule, if it had existed, would have prevented it?**
 
 ::: notes
-PAUSE — 2 min (1 min each). Then take 2 from the room. Capture the "rule that would have prevented it" — callback later as governance in plain clothes. Makes governance their idea, not yours.
+Chime in in the comments. Share a time bad, missing, or messy data cost your shop something — money, a relationship, or an afternoon. If you're in higher ed, who defines "alumni" or "former parent"? If you're in healthcare, what counts as a "patient"? If you're at a cause organization, how do you define "opt-out" or "restricted gift"?
 :::
 
 
@@ -216,7 +198,7 @@ PAUSE — 2 min (1 min each). Then take 2 from the room. Capture the "rule that 
 Stripping away the frameworks until something useful is left.
 
 ::: notes
-Section divider. Goal: demystify. By the end nobody should think this is an IT thing or a compliance thing.
+So, how? Can I make a framework? By the end nobody should think this is an IT thing or a compliance thing.
 :::
 
 
@@ -224,10 +206,12 @@ Section divider. Goal: demystify. By the end nobody should think this is an IT t
 
 [Data governance is the set of *agreements* about how we create, use, share, and protect data — and *who decides* when those agreements are unclear.]{.big}
 
-That's it: **shared rules**, and **clear decision rights**.
+**Shared rules**, and **clear decision rights**.
 
 ::: notes
 Slow down. Repeat the definition twice. Reframe: governance = agreements + decision rights. Not software. This is the slide newcomers need most — it lowers the barrier to entry. I'll say it again: the machinery is slow and ponderous. That is ok. It is necessary to get everyone's perspective and buy-in. Once we have those agreements, that gives us a path to address questions and disagreements. The agreements are the rules, and the decision rights are the people who get to make the call when the rules aren't clear.
+
+For me, the lightbulb came on at the end of a data governance conversation, when we'd worked through some definitions and made decisions, then the data governance lead said "when you do your next major update to your system, you will implement the changes we agreed upon today." SOMETHING HAPPENED. Outdated definitions that were mildly inconvenient were now going to be fixed.
 :::
 
 ## Beyond "fixing spreadsheets": a living ecosystem {.contentbar}
@@ -238,7 +222,7 @@ Fixing a spreadsheet is a one-time act. A framework is a living ecosystem — on
 ::: {.column width="33%"}
 ::: {.card .everyone}
 [Clean]{.ctitle}
-Accurate and consistent by default, not by heroic cleanup.
+Accurate and consistent by default.
 :::
 :::
 ::: {.column width="33%"}
@@ -340,7 +324,7 @@ Find out who is the steward for the data you touch most. If there isn't one, you
 ::::
 
 ::: notes
-Speak to the "other people do it" group. Lower the stakes: you don't have to run governance to practice it. You can be a passenger on this ride, asking questions along the way.
+Speak to the "other people do it" group. Lower the stakes: you don't have to run governance to practice it. You can be a passenger on this ride, asking questions along the way. You can be good at data governance without a lot of work or risk.
 :::
 
 
@@ -368,7 +352,7 @@ You turn a leader's policy ("data should be accurate") into a rule a participant
 ::::
 
 ::: notes
-The working core of most of the room — your subject-matter experts. Emphasize documentation — the bus-factor problem. Stewards make abstract policy operational.
+The working core of most of the room — your subject-matter experts. Emphasize documentation — the bus-factor problem. Stewards make abstract policy operational. You're the one seeing the data and spotting the problems.
 :::
 
 
@@ -390,13 +374,13 @@ The working core of most of the room — your subject-matter experts. Emphasize 
 ::: {.column width="45%"}
 ::: {.card .leader}
 [The leadership trap]{.ctitle}
-Buying a tool and declaring victory. Governance is decisions and culture; software only enforces decisions you've already made.
+Avoiding clear decisions and difficult conversations in the name of false harmony. The cost: messy data, frustrated stewards, and a team that doesn't trust its own dashboards.
 :::
 :::
 ::::
 
 ::: notes
-For leaders and aspiring leaders. Hardest act: giving stewards air cover when a rule annoys a fundraiser. Decision rights > tooling.
+Data governance is an unfamiliar concept for many leaders. It can feel abstract and unimportant, but the cost of ignoring it is real. Leaders are the ones who can make decisions and give stewards the authority to enforce them. The "false harmony" trap is a common one — leaders avoid making a decision to keep everyone happy, but that leads to worse outcomes in the long run.
 :::
 
 
@@ -436,7 +420,7 @@ Section divider. Now we build out the framework we teased earlier. Four walls: C
 - Enter it right the first time — *sloppy or stale input is a confident wrong answer*
 
 ::: notes
-C — the backbone of every trustworthy dashboard (folds in standards AND input quality). "If 'major gift' means three things to three people, your dashboards are fiction." Stewards own the dictionary; everyone follows it. ~3 min.
+C — the backbone of every trustworthy dashboard (folds in standards AND input quality). "If 'major gift' means three things to three people, your dashboards are fiction." Stewards own the dictionary; everyone follows it. ~3 min. This is the most obvious element of DG. 
 :::
 
 
@@ -494,7 +478,7 @@ E — the wall that earns governance its seat; it ties C-A-R-E to our values. "D
 
 ## "Can" vs. "should" {.pause .contentbar}
 
-[Turn & talk (2 min)]{.kicker}
+[Anonymous Share in Chat (2 min)]{.kicker}
 
 Name one piece of information your shop *could* collect on people but maybe *shouldn't*. Where's your line — and who at your org gets to draw it?
 
@@ -541,6 +525,8 @@ Failure is the 40-page policy nobody reads. The win is one rule, agreed and foll
 
 ::: notes
 Antidote to overwhelm. "One rule, one owner." Discourage the big-bang launch. Momentum comes from small visible wins.
+
+This is where I'll share a tip that you can do some shadow data governance work, and solve issues before it becomes a meeting with 40 people. The committee might still need to ratify a decision, but the work has been done.
 :::
 
 
@@ -622,7 +608,12 @@ Land the description's closing promise: governance as strategic advantage that e
 [Rituals]{.ctitle}
 [The recurring habits that keep it alive: a monthly data-quality review, a standing definitions huddle.]{.small}
 :::
+
+::: {.card}
+[Master Data Management]{.ctitle}
+[The practice of keeping a single source of truth for the most important data, and syncing it across systems.]{.small}
 :::
+
 ::: {.column width="50%"}
 ::: {.card .leader}
 [PII]{.ctitle}
@@ -637,6 +628,11 @@ Land the description's closing promise: governance as strategic advantage that e
 ::: {.card .leader}
 [Charter]{.ctitle}
 [The one-page founding doc: why governance exists, who decides, and what's in scope.]{.small}
+:::
+
+::: {.card .leader}
+[Decision-right]{.ctitle}
+[The person who gets the final say when a rule is unclear or a dispute arises.]{.small}
 :::
 
 :::
