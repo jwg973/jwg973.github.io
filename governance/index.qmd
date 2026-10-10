@@ -613,6 +613,7 @@ Land the description's closing promise: governance as strategic advantage that e
 [Master Data Management]{.ctitle}
 [The practice of keeping a single source of truth for the most important data, and syncing it across systems.]{.small}
 :::
+:::
 
 ::: {.column width="50%"}
 ::: {.card .leader}
